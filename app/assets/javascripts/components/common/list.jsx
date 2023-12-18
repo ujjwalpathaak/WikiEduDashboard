@@ -100,7 +100,7 @@ const List = createReactClass({
             <p>{I18n.t(keyObj.info_key, options)}</p>
           </div>
         ), (
-          <span key="ttindicator" className="tooltip-indicator" />
+          <span key="ttindicator" className="tooltip-indicator-list" />
         )];
       }
       const order = (keyObj.order) ? keyObj.order : '';

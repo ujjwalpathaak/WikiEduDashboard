@@ -183,7 +183,7 @@ const EditButton = ({
   if (is_open) finalText = I18n.t('users.assign_articles_done');
 
   return (
-    <div className="tooltip-trigger" onMouseEnter={() => setHover(true)} onMouseDown={() => setHover(false)}>
+    <div className="tooltip-trigger" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
       <button
         className={`button border small assign-button ${is_open ? 'dark' : ''}`}
         onClick={open}
@@ -383,7 +383,7 @@ const AssignButton = ({ course, role, course_id, wikidataLabels = {}, hideAssign
     let tooltip;
     let tooltipIndicator;
     if (tooltip_message && !isOpen) {
-      tooltipIndicator = (<span className={`${hover ? 'tooltip-indicator' : 'tooltip-indicator-hover'}`}/>);
+      tooltipIndicator = (<span className={`${hover ? 'tooltip-indicator-hover' : 'tooltip-indicator'}`}/>);
       tooltip = (<Tooltip message={tooltip_message} />);
     }
 
